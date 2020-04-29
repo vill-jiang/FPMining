@@ -39,6 +39,6 @@ obj/*
 *.user
 *.vcxproj
 *.filters
-*Release/*
-*Debug/*
+!Release/*
+!Debug/*
 *cxxopts.hpp
