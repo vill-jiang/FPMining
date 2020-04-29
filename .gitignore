@@ -32,9 +32,9 @@
 *.app
 
 # VS
-.vs/*
-bin/*
-obj/*
+.vs/
+bin/
+obj/
 *.sln
 *.user
 *.vcxproj
@@ -42,3 +42,6 @@ obj/*
 Release/
 Debug/
 *cxxopts.hpp
+
+# project
+*.itemsets
