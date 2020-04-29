@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+# VS
+.vs/*
+bin/*
+obj/*
+*.sln
+*.user
+*.vcxproj
+*.filters
+*Release/*
+*Debug/*
+*cxxopts.hpp
