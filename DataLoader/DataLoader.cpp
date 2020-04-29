@@ -16,7 +16,7 @@ bool DataLoader::loadMap(std::unordered_map<unsigned, std::string>& map, const s
         std::string line;
         std::getline(in, line);
         while (!line.empty()) {
-            auto j = line.find(DataLoader::DELIMITER);
+            const auto j = line.find(DataLoader::DELIMITER);
             if (j == std::string::npos) {
                 continue;
             } else {
@@ -39,7 +39,7 @@ void DataLoader::clear() {
 int DataLoader::readFromFile(const std::string& filename) {
     std::ifstream in(filename);
     if (in.is_open()) {
-        int before = this->transactions.size();
+        const auto before = this->transactions.size();
         std::string line;
         std::getline(in, line);
         while (!line.empty()) {
