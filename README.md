@@ -8,12 +8,16 @@ Apriori &amp; FPGrowth implementation by C++
 ## 使用方法
 
 ### 编译
+
 ```shell
 > make
 > cd bin
 ```
 
+### 参数介绍
+
 以下操作皆在 bin/ 目录下进行
+
 ```shell
 > ./FPMining.exe --help
 Apriori & FPGrowth implement with c++. Author: Jiang HuiYu.
@@ -34,6 +38,10 @@ Usage:
   -h, --help            Print usage
 ```
 
+### 小例子
+
+#### 文件内容
+
 ```
 > cat ../DataLoader/test.txt
 1,2,5,
@@ -52,7 +60,11 @@ Usage:
 3,C
 4,D
 5,E
+```
 
+#### 运行结果
+
+```shell
 > ./FPMining.exe
 FPGrowth time consuming: 0 s, get 13 itemsets
 
@@ -87,9 +99,12 @@ Generate 24 rules, show 24 rules.
 }
 ```
 
-### 真实样例展示
+### 真实样例
 
 计算 Groceries 数据集中支持度大于等于 10 的项集， 并输出置信度较大的前 20 个关联规则。
+
+注意：通过 -s 设置更小的最小支持度将会导致运行时间大大增加。
+
 ```shell
 > ./FPMining.exe -i ../Dataset/Groceries.set -s 10 -t 20
 FPGrowth time consuming: 0.208439 s, get 13492 itemsets
